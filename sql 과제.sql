@@ -92,7 +92,7 @@ SELECT
 FROM
 	employee
 WHERE
-	EMP_NAME LIKE '%김%';
+	EMP_NAME LIKE '김%';
 
 -- EMPLOYEE 테이블에서 '하'가 이름에 포함된
 -- 직원의 이름, 주민번호, 부서코드 조회
