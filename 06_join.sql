@@ -120,9 +120,13 @@ join
 
 -- select : 셀렉트한 데이터를 출력할것이다
 -- from : (right가 아닌이상) from 문에 적은 테이블을 기준으로 하겠다
--- join :join 문에 적은 테이블을 기준 테이블에 붙이겠다(즉 기준 테이블은 전부다 출력하고 join한 테이블을  select한 데이터가 같으면 붙이겠다)
+-- join :join 문에 적은 테이블을 기준 테이블에 붙이겠다
 -- on : 무엇을 기준으로 붙일것인가? (예제로는 ref_category_code에 해당하는 category_name을 전부다 출력 하고 거기에다가 ref_category_code와 category_code가 같으면 category_name 을 붙이겠다
 
+-- (inner) join : on 문에 적은 테이블이 같은 것들 만 출력
+-- left join : from tbl 기준이기 때문에 from 테이블은 전부 출력후 join 한 테이블을 on 에 적힌 조건에 맞는 것들을 붙이겠다
+-- right join : 기준 테이블이 from 이 아닌 join 문에 적은 테이블 기준
+-- crorssed join : 가능한 모든 조합을 출력
 
 
 
