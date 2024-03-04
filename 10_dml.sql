@@ -12,8 +12,8 @@ select
 from
 	tbl_menu;
 -- -------------------------------------------------------------------------------    
-insert  -- 삽입할거야
-into tbl_menu         -- 어디에? tbl_menu에 
+insert  				-- 삽입할거야
+into tbl_menu           -- 어디에? tbl_menu에 
 value (null,'바나나해장국',8500,4,'Y');       -- value (~) : 이러한 값을 집어 넣을거임
 
 -- 테이블의 정보확인 describe
