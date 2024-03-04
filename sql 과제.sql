@@ -63,7 +63,7 @@ SELECT
 FROM
 	employee
 WHERE
-	BONUS IS NULL;
+	BONUS IS NULL;                                                                                                                                                      
     
 -- EMPLOYEE테이블에서 급여를 350만원 이상
 -- 550만원 이하를 받는

@@ -9,9 +9,9 @@
 
 -- 별칭에 띄어쓰기나 특수기호가 없다면 single quatation (') 와 as 는 생략 가능
 select 
-	menu_code as 'code',
-    menu_name name,
-    menu_price as 'price'
+	menu_code as 'code'
+   ,menu_name name
+   ,menu_price as 'price'
 from
 	tbl_menu
 order by
@@ -21,8 +21,8 @@ order by
 -- 테이블 별칭을 작성할 수 있으며 어떤 테이블 소속인지를 쉽게 알 수 있게 한다
 
 select
-	a.category_code,
-    a.menu_name
+	a.category_code
+   ,a.menu_name
 from
 	tbl_menu a;
     
@@ -47,15 +47,15 @@ select
 from
 	tbl_menu a
 join
-tbl_category b on a.category_code = b.category_code;
+	tbl_category b on a.category_code = b.category_code;
 
 -- using 을 활용한 join 
 -- 칼럼명이 같을 경우 using 으로 서로 연관있는 칼럼에 대한 조건을 작성하여
 -- join 하는 경우
 
 select
-	a.menu_name,
-	b.category_name
+	a.menu_name
+   ,b.category_name
 from
 	tbl_menu a
 join
@@ -69,8 +69,8 @@ using
 
 select 
 	a.menu_name
-    ,b.category_code,
-    a.category_code
+   ,b.category_code
+   ,a.category_code
 from 
 	tbl_category b
 left join 
@@ -111,8 +111,8 @@ from
 	tbl_category;
 
 select 
-	a.category_name,
-	b.category_name
+	a.category_name
+   ,b.category_name
 from
 	tbl_category a
 join
@@ -126,7 +126,7 @@ join
 -- (inner) join : on 문에 적은 테이블이 같은 것들 만 출력
 -- left join : from tbl 기준이기 때문에 from 테이블은 전부 출력후 join 한 테이블을 on 에 적힌 조건에 맞는 것들을 붙이겠다
 -- right join : 기준 테이블이 from 이 아닌 join 문에 적은 테이블 기준
--- crorssed join : 가능한 모든 조합을 출력
+-- crorss join : 가능한 모든 조합을 출력
 
 
 
