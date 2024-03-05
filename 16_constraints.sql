@@ -224,11 +224,30 @@ insert into tbl_country
 values
 (null, default,default,default,default);
 
+-- ----------------------------------------------------------------------------------------------
+-- primary key 가 2개가 되는가
 
+drop table if exists test;
+create table if not exists test(
+age int auto_increment primary key,
+name varchar(255) not null primary key,
+gender varchar(255) check( gender in ('남', '여'))
 
+) engine = innodb;
+-- primary key 는 2개 이상은 안된다
 
+drop table if exists test;
+create table if not exists test(
+age int auto_increment not null,
+name varchar(255) not null not null unique,
+gender varchar(255) check( gender in ('남', '여')),
+primary key(age)
 
+) engine = innodb;
 
+describe test;
 
+-- 컬럼레벨의 값을 우선적으로 primary key 로 인식한다 따라서 테이블 레벨에서의 primary key 는 unique 로 인식되는 것이다
+-- 다만 not null, unique 컬럼레벨과 primary key 테이블 레벨이 만나면 primary key 테이블이 이긴다
 
 
